@@ -22,3 +22,6 @@ yarn-error.log
 ###> AssetMapper - Vendor Files Downloaded Locally ###
 /assets/vendor/
 ###< AssetMapper - Vendor Files Downloaded Locally ###
+
+.editorconfig
+phpunit.dist.xml
