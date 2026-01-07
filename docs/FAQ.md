@@ -40,6 +40,15 @@ class User {
 $user = new User(42);
 ```
 
+### [final class](https://stackoverflow.com/a/35133708)
+1. Declaring a class as final prevents it from being subclassed—period; it’s the end of the line.
+
+2. Declaring every method in a class as final allows the creation of subclasses, which have access to the parent class’s methods, 
+but cannot override them. The subclasses can define additional methods of their own.
+
+3. The final keyword controls only the ability to override and should not be confused with the private visibility modifier. 
+A private method cannot be accessed by any other class; a final one can.
+
 ### [constructor promotion](https://php.watch/versions/8.0/constructor-property-promotion)
 > Note!!!: Only constructor supports property promotion
 ```
