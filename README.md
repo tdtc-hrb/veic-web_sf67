@@ -3,16 +3,16 @@ veic_web with symfony
 Veic Corporation is web site
 
 ```
-Copyright (c) 2022-2024 Harbin TDTC Technology Development Co., Ltd.
+Copyright (c) 2022-2026 Harbin TDTC Technology Development Co., Ltd.
 
 Apache License Version 2.0
 ```
 
-- PHP8.1+
+- PHP8.2+
 - IDE    
 VS Code(Symfony Extension Pack, TWIG pack-Bajdzis)
 - symfony    
-[![Current Version: v6.4](https://github.com/tdtc-hrb/veic-web_sf6/blob/main/docs/sf_version.svg)](https://symfony.com/releases)
+[![Current Version: v7.4](https://github.com/tdtc-hrb/veic-web_sf6/blob/main/docs/sf_version.svg)](https://symfony.com/releases)
 
 ## the project structure
 
@@ -83,7 +83,7 @@ yarn encore dev --watch
 ### run
 [start server](https://github.com/symfony-cli/symfony-cli/releases):
 ```bash
-symfony server:start
+symfony --allow-all-ip server:start
 ```
 - [abuot](http://127.0.0.1:8000/en-us/about)
-![hello](https://github.com/tdtc-hrb/veic-web_sf6/blob/main/public/img/hello_screenshot.png)
+![hello](https://github.com/tdtc-hrb/veic-web_sf67/blob/main/public/img/hello2_screenshot.png)
