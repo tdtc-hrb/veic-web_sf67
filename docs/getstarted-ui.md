@@ -10,7 +10,7 @@ UI
  如果没有 [yarn.lock](https://github.com/yarnpkg/berry/issues/2212) 文件, 在工程根目录新建一个空的.
 ```
 
-- [install npm](https://tdtc-hrb.github.io/csdn/post/nodejs-ubuntu/)
+- [install npm](https://tdtc-hrb.github.io/csdn/post/nodejs-debian/)
 - install yarn
 ```
 sudo npm install --global yarn
@@ -26,11 +26,6 @@ yarn add sass-loader
 - JQuery
 ```
 yarn add jquery --dev
-```
-- Bootstrap
-```
-yarn add @popperjs/core --dev
-yarn add bootstrap --dev
 ```
 
 ### update
@@ -53,6 +48,16 @@ yarn add webpack-notifier --dev
 yarn add @symfony/webpack-encore --dev
 ```
 
+### Bootstrap
+```
+yarn add @popperjs/core --dev
+yarn add bootstrap --dev
+```
+#### v6 breaking changes
+- Add new colors Sass partial, generate new CSS variables for tints and
+[scss/_colors.scss](https://github.com/twbs/bootstrap/commit/7925387d5eda17500a837a068afb98c5cc3c7191#diff-6ec80b85fef778406fe6f5360b0c0e7fe08cecae0641ef8da62809af4f2392a9)
+- [Remove jQuery support in plugins](https://github.com/twbs/bootstrap/commit/eda99074f887aaf3a43afd4cdb1fa28308962bdf)
+
 
 ## Asset Mapper
 > 推荐在v8.4版本, 使用 AssetMapper
@@ -69,8 +74,10 @@ at .gitignore:
 ```
 
 
-## Enabled Sass
-- webpack.config.js
+## Sass
+> webpack.config.js
+
+- enables Sass/SCSS support
 ```
 // enables Sass/SCSS support
 .enableSassLoader()
@@ -79,14 +86,25 @@ at .gitignore:
 ### User config
 - app.scss
 add app.scss file of assets/styles
-```
-@import "~bootstrap/scss/bootstrap";
-```
 - app.js
 import it at app.js:
 ```
 import './styles/app.scss';
 ```
+
+#### app.scss
+Use
+```
+@use "~bootstrap/scss/bootstrap";
+```
+instead of
+```
+@import "~bootstrap/scss/bootstrap";
+```
+
+also see: [@import rules](https://sass-lang.com/documentation/breaking-changes/import/), 
+[@use](https://sass-lang.com/documentation/at-rules/use/), 
+and [Mixed declarations](https://github.com/twbs/bootstrap/issues/40621)
 
 
 ## [usage jquery](https://symfony.com/doc/current/frontend/encore/legacy-applications.html#accessing-jquery-from-outside-of-webpack-javascript-files)
