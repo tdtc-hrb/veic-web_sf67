@@ -269,9 +269,7 @@ cd config
 - routes.yaml
 ```
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+    resource: routing.controllers
     type: attribute
 ```
 
