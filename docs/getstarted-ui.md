@@ -5,27 +5,19 @@ UI
 - usage jquery
 
 ## Preparation
-注意:  !!! at yarn V2 !!!
-```
- 如果没有 [yarn.lock](https://github.com/yarnpkg/berry/issues/2212) 文件, 在工程根目录新建一个空的.
-```
+- [install yarn](https://tdtc-hrb.github.io/csdn/post/nodejs-debian/)
+- [set proxy](https://tdtc-hrb.github.io/csdn/post/ops_network_proxy/)
 
-- [install npm](https://tdtc-hrb.github.io/csdn/post/nodejs-debian/)
-- install yarn
-```
-sudo npm install --global yarn
-```
+#### yarn.lock
+注意:  !!! at yarn V2 !!!
+
+如果没有 [yarn.lock](https://github.com/yarnpkg/berry/issues/2212) 文件, 在工程根目录新建一个空的.
 
 ### Sass
 管理 JQuery && Bootstrap
 ```
 yarn add sass --dev
 yarn add sass-loader
-```
-
-- JQuery
-```
-yarn add jquery --dev
 ```
 
 ### update
@@ -46,6 +38,11 @@ yarn add webpack-notifier --dev
 - webpack bridge
 ```
 yarn add @symfony/webpack-encore --dev
+```
+
+### JQuery
+```
+yarn add jquery --dev
 ```
 
 ### Bootstrap
